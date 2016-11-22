@@ -1,0 +1,10 @@
+#! /usr/bin/env ruby
+
+str = "＊あいうえおかきくけこさしすせそたちつてなにぬねのはひふへほまみむめもやゆよらりるれろわをんっゃゅょ　ー０１２３４５６７８９S"
+
+msg = (1..23).map{|x| str[rand(str.size)]}
+msg[5] = " "
+msg[13] = "\n"
+msg[19] = " "
+
+`git commit -m \'#{msg.join("")}\'`
